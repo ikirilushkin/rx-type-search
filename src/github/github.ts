@@ -21,7 +21,8 @@ export interface SearchResult {
 }
 
 export function findRepos(repo: string) {
-    return fetch(`${API_URL}?q=${repo}&access_token=${TOKEN}`)
+    // return fetch(`${API_URL}?q=${repo}&access_token=${TOKEN}`)
+    return fetch(`${API_URL}?q=${repo}`)
         .then(res => res.json())
         .then(value => {
             return value as SearchResult
